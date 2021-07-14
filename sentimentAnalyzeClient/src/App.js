@@ -44,10 +44,8 @@ class App extends React.Component {
       url = url+"/text/sentiment?text="+document.getElementById("textinput").value;
     }
     ret = axios.get(url);
+    
     ret.then((response)=>{
-
-      //Include code here to check the sentiment and format the data accordingly
-
       this.setState({sentimentOutput:response.data});
       let output = response.data;
       if(response.data === "positive") {

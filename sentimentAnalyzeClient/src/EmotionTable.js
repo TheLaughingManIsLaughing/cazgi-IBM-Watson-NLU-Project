@@ -8,11 +8,11 @@ class EmotionTable extends React.Component {
                 <table className="table table-bordered">
                     <tbody>
                     { 
-                        Object.entries(this.props.emotions).map(([key, value]) => {
+                        Object.entries(this.props.emotions).map(emotion => {
                             return (
                                 <tr>
-                                <td>{key}</td>
-                                <td>{value}</td>
+                                <td>{emotion[0]}</td>
+                                <td>{emotion[1]}</td>
                                 </tr>
                             )
                         })
